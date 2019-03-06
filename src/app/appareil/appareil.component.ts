@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { removeDebugNodeFromIndex } from '@angular/core/src/debug/debug_node';
 
 @Component({
   selector: 'app-appareil',
@@ -17,6 +18,14 @@ export class AppareilComponent implements OnInit {
 
   getStatus() {
     return this.appareilStatus;
+  }
+
+  getColor(){
+    if(this.appareilStatus === 'alumé'){
+      return 'green';
+    } else if(this.appareilStatus === 'éteint'){
+      return 'red';
+    }
   }
 
 }
