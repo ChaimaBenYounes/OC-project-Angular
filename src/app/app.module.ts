@@ -13,6 +13,7 @@ import { AuthComponent } from './auth/auth.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 const appRoutes: Routes = [
   { path: 'appareils',canActivate: [AuthGuard],  component: AppareilViewComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     AppareilViewComponent,
     AuthComponent,
     SingleAppareilComponent,
-    FourOhFourComponent
+    FourOhFourComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
