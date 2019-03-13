@@ -10,7 +10,11 @@ import { UserService } from '../services/user.service';
 })
 export class UserListComponent implements OnInit {
 
-  users: User[];
+  private users: User[] = [
+    new User('Will', 'Alexander', 'will@will.com', 'jus d\'orange', ['coder', 'boire du café']), 
+    new User('Will', 'Alexander', 'will@will.com', 'jus d\'orange', ['coder', 'boire du café']), 
+    new User('Will', 'Alexander', 'will@will.com', 'jus d\'orange', ['coder', 'boire du café']), 
+  ];
   userSubscription: Subscription;
 
   constructor(private userService : UserService) { }
@@ -21,7 +25,7 @@ export class UserListComponent implements OnInit {
         this.users = users;
       }
     );
-    this.userService.emitUsers();
+    //this.userService.emitUsers();
   }
 
   ngOnDestroy(){
